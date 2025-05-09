@@ -5,3 +5,27 @@
   .login p {
     color: #aaa;
   }
+
+  .googleButton {
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+    width: auto;
+    padding: 10px 20px;
+    background-color: white;
+    color: #aaa;
+    border: 2px solid #aaa;
+  }
+
+  .googleLogin {
+    display: flex;
+    justify-content: center;
+  }
+
+  .googleImg {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }

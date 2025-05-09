@@ -1,0 +1,148 @@
+body, #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.post_wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post_container {
+    width: 60%;
+    min-width: 300px;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 0 0 2rem;
+    background-color: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);       
+}
+
+.post_header {
+    width: 60%;
+    min-width: 300px;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto 0;
+    padding: 0;
+}
+
+.back_button {
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+.back_button:hover {
+    background-color: #e0e0e0;
+}
+
+.post_title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.post_content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.post_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;    
+}
+
+.post_body {
+    padding: 0 2rem;
+    font-size: 1.1rem;
+    color: #333;
+    margin: 2rem 0;
+    line-height: 1.8;
+}
+
+.tags_section {
+    padding: 0 2rem;
+    margin-top: 2rem;
+}
+
+.tags_section h3 {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.tags_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    padding: 0.4rem 0.8rem;
+    background-color: #e1f5fe;
+    color: #0288d1;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #b3e5fc;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    
+    .post_container, .post_header {
+        width: 90%;
+        padding: 0;
+    }
+
+    .post_header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .back_button {
+        align-self: flex-end;
+    }
+
+    .post_title {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+
+    .post_image {
+        height: 200px;
+    }
+
+    .post_body, .tags_container {
+        padding: 0 1rem;
+    }
+}
