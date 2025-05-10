@@ -1,18 +1,19 @@
 import {
+    getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     updateProfile,
     signOut,
-  } from 'firebase/auth'
-  import { auth } from "../firebase/config"
+  } from 'firebase/auth' 
   import { useState, useEffect } from "react"
+  import {auth as authFirebase, googleProvider} from "../firebase/config"
   
-  export const useAuthentication = () => {
+  export const userAuthentication = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
     const [cancelled, setCancelled] = useState(false);
 
-
+    const auth = getAuth();
   
     function checkIfIsCancelled() {
       if (cancelled) {
@@ -96,6 +97,21 @@ import {
       setLoading(false);
     };
   
+    const loginGoogle = async () => {
+      if(checkIfIsCancelled()) return
+      setLoading(true)
+      setError(null)
+
+      try {
+        const result = await singinWithPopup(authFirebase, googleProvider)
+        return result.user;
+      } catch (error) {
+        console.error("Erro ao fazer login com Gloogle.", error.message)
+        setError("Erro ao logar com o Gloogle.")
+      }
+      setLoading(false)
+    }
+
     useEffect(() => {
       return () => setCancelled(true);
     }, []);
@@ -107,5 +123,6 @@ import {
       logout,
       login,
       loading,
+      loginGoogle,
     };
   };

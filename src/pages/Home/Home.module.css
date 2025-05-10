@@ -1,27 +1,78 @@
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
+.search {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
   .search_form {
-    max-width: 100%;
-    width: 60%;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .search_form_container {
     display: flex;
-    justify-content: center;
-    margin-bottom: 2em;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3 ease;
+  }
+
+  .search_form_container:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .search_form_container input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    background: #fff;
+    min-width: 0;
   }
   
-  .search_form input {
-    margin-right: 10px;
-    width: 50%;
+  .search_form_container input:focus {
+    outline: none;
   }
-  
+
+  .search_form_container button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+
+  .search_form_container button:hover {
+    background-color: #2980b9;
+  }
+
+.post_list {
+  width: 100%;
+}
+
   .noposts {
     text-align: center;
+    padding: 2em;
   }
-  
+
   .noposts p {
     margin-bottom: 1.5em;
   }
