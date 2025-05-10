@@ -14,16 +14,7 @@ Inspirando-se na estrutura de:
 
 ---
 
-## 🛠️ Tarefas a serem realizadas
-
-### 1. Preparação do Ambiente
-
-- Faça o **fork** do repositório de avaliação.
-- Crie uma **branch** chamada:  
-  `avaliacaodw-seulogindogithub`
-- Exemplo: `avaliacaodw-joaosilva`
-
----
+## 🛠️ Tarefas realizadas
 
 ### 2. Construção de Rotas Principais
 
@@ -82,6 +73,7 @@ Implemente as seguintes **rotas** usando `react-router-dom`:
 - Utilize um `PrivateRoute` (ou configuração equivalente) para proteger:
   - `/dashboard`
   - `/post/:id`
+  - `/post/edit/:id`
   - `/post/new`
 
 - Usuário **não logado** deve ser redirecionado para `/login`.
@@ -104,47 +96,13 @@ Implemente as seguintes **rotas** usando `react-router-dom`:
 
 ---
 
-## ⚙️ Dicas Técnicas para os Hooks
-
-- **useState**:
-  ```javascript
-  const [posts, setPosts] = useState([]);
-  ```
-
-- **useEffect** para buscar posts:
-  ```javascript
-  useEffect(() => {
-    // Função para buscar posts aqui
-  }, []);
-  ```
-
-- **useContext** para controle global de autenticação:
-  - Criar um `AuthContext`.
-  - Fornecer informações de login para todo o app.
-
-- **Redirecionamento Condicional**:
-  ```javascript
-  if (!user) {
-    return <Navigate to="/login" />;
-  }
-  ```
-
-- **Proteção de Rotas** usando `Outlet`:
-  ```javascript
-  const PrivateRoute = () => {
-    return user ? <Outlet /> : <Navigate to="/login" />;
-  }
-  ```
-
----
-
 ## 📌 Entrega
 
 Você deve entregar:
 
-1. **Link da Branch** `avaliacaodw-seulogindogithub`
-2. **Link do Deploy Funcionando** para teste público
-3. **Pipeline CodeQL** rodando no GitHub Actions
+1. **Link da Branch** `https://github.com/VictorHugoTesti/avaliacao-lifedev/tree/avaliacaodw-VictorHugoTesti`
+2. **Link do Deploy Funcionando** para teste público: `https://minidevblogvictortesti.web.app/`
+3. **Pipeline CodeQL** rodando no GitHub Actions: `https://github.com/VictorHugoTesti/avaliacao-lifedev/actions/runs/14940838754`
 
 ---
 
